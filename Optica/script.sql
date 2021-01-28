@@ -29,7 +29,7 @@ CREATE TABLE cliente (
 
 CREATE TABLE marca (
     marca VARCHAR(15) PRIMARY KEY,
-    nif_proveedor VARCHAR(29),
+    nif_proveedor VARCHAR(20) NOT NULL,
     FOREIGN KEY (nif_proveedor) REFERENCES proveedor(nif)
 );
 
