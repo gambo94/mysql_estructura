@@ -74,6 +74,7 @@ CREATE TABLE order_has_products (
     order_id INT UNSIGNED,
     prod_id INT UNSIGNED,
     cantidad INT,
+    PRIMARY KEY (order_id, prod_id),
     FOREIGN KEY (order_id) REFERENCES order_cl(id_order),
     FOREIGN KEY (prod_id) REFERENCES producto(prod_id)
 );
