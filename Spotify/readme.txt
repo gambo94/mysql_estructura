@@ -1,1 +1,1 @@
-In order to avoid user repetition in Playlist table, even if it's a 1:n relationship, I've created another table user_creates_playlist
+In order to avoid users' repetitions in the Playlist table, even if it's a 1:n relationship, I've created another table user_creates_playlist
