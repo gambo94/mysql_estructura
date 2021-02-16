@@ -1,0 +1,1 @@
+In order to avoid user repetition in Playlist table, even if it's a 1:n relationship, I've created another table user_creates_playlist
