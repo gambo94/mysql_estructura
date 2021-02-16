@@ -1,11 +1,11 @@
 
 
 /* users */
-INSERT INTO user VALUES('fakeuser', 'soyusuario@usuario.es', '1993-10-03', 'F', 'Spain', '080839');
-INSERT INTO user VALUES('eren', 'titanfundador@aot.es', '1995-04-03', 'M', 'Japan', '080374');
-INSERT INTO user VALUES('annie', 'titanhembra@aot.es', '1996-05-05', 'F', 'Japan', '050343');
-INSERT INTO user VALUES('pieck', 'cartitan@aot.jp', '1992-06-07', 'other', 'Japan', '092774');
-INSERT INTO user VALUES('mikasa', 'mikasa@aot.es', '1994-05-03', 'F', 'Japan', '283374');
+INSERT INTO user VALUES('fakeuser', 'soyusuario@usuario.es', '123456fake','1993-10-03', 'F', 'Spain', '080839');
+INSERT INTO user VALUES('eren', 'titanfundador@aot.es', '123456eren', '1995-04-03', 'M', 'Japan', '080374');
+INSERT INTO user VALUES('annie', 'titanhembra@aot.es', '123456annie', '1996-05-05', 'F', 'Japan', '050343');
+INSERT INTO user VALUES('pieck', 'cartitan@aot.jp', '123456pieck', '1992-06-07', 'other', 'Japan', '092774');
+INSERT INTO user VALUES('mikasa', 'mikasa@aot.es', '123456mikasa', '1994-05-03', 'F', 'Japan', '283374');
 
 /* videos */
 

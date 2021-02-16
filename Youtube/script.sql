@@ -5,6 +5,7 @@ USE youtube;
 CREATE TABLE user (
     id_user VARCHAR(30) PRIMARY KEY,
     email VARCHAR(40) NOT NULL,
+    pwd VARCHAR(40) NOT NULL,
     date_of_birth DATE NOT NULL,
     gender ENUM('M', 'F', 'other') NOT NULL,
     country VARCHAR(20) NOT NULL,
