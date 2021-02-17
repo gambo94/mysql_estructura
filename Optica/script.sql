@@ -23,9 +23,16 @@ CREATE TABLE cliente (
     nombre_completo VARCHAR(20) NOT NULL,
     adr VARCHAR(50) NOT NULL,
     correo VARCHAR(20) NOT NULL,
-    fecha_registro TIMESTAMP NOT NULL,
-    cliente_referente_nombre VARCHAR(20)
+    fecha_registro TIMESTAMP NOT NULL
 ); 
+
+CREATE TABLE ref_cliente(
+    id_referral INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_referent INT UNSIGNED,
+    id_referred INT UNSIGNED,
+    FOREIGN KEY (id_referent) REFERENCES cliente(id_cliente),
+    FOREIGN KEY (id_referred) REFERENCES cliente(id_cliente)
+);
 
 
 CREATE TABLE marca (
@@ -36,8 +43,8 @@ CREATE TABLE marca (
 
 CREATE TABLE gafas (
     id_producto INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    graduación_derecha FLOAT NOT NULL,
-    graduación_izquierda FLOAT NOT NULL,
+    graduacion_derecha FLOAT NOT NULL,
+    graduacion_izquierda FLOAT NOT NULL,
     tipo_montatura VARCHAR(10) NOT NULL,
     color_montatura VARCHAR(10) NOT NULL,
     color_vidrio VARCHAR(19) NOT NULL,
@@ -49,3 +56,5 @@ CREATE TABLE gafas (
     FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
+
+
