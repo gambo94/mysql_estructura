@@ -31,7 +31,7 @@ INSERT INTO categoria VALUE (001, 'Calzone');
 INSERT INTO categoria VALUE (002, 'Blanca');
 INSERT INTO categoria VALUE (003, 'Rossa');
 
-/* Productos */
+/* products */
 INSERT INTO producto VALUES (1, 'Hamburguesa con queso', 'Está riquísima', NULL, 7, NULL);
 INSERT INTO producto VALUES (2, 'Coca Cola', 'Renfrescante y siempre buena, cuidado con los eructos', NULL, 1.5, NULL);
 INSERT INTO producto VALUES (3, 'Coca Cola Zero', 'Renfrescante, siempre buena y con menos azúcares. Cuidado con los eructos', NULL, 1.5, NULL);
@@ -40,19 +40,19 @@ INSERT INTO producto VALUES (5, 'Pizza ciclista', 'Muy rica como entrante para c
 INSERT INTO producto VALUES (6, 'Calzone cotto e funghi', 'Una pizza cerrada con jamón york y setas', NULL, 8, 001);
 INSERT INTO producto VALUES (7, 'Pizza Rossini', 'Una pizza típica de Pésaro, con mayonesa y huevos duros', NULL, 9, 002);
 
-/* Pedidos */
+/* orders */
 INSERT INTO order_cl VALUE (00001, CURRENT_TIMESTAMP(), 'domicilio', 8.5, 01, 1, 4);
 INSERT INTO order_cl VALUE (00002, CURRENT_TIMESTAMP(), 'recoger', 16.5, 01, 1, NULL);
 INSERT INTO order_cl VALUE (00003, CURRENT_TIMESTAMP(), 'domicilio', 14.5, 02, 3, 1);
 
 /* Pedido_tiene_productos */ 
-INSERT INTO order_has_products VALUE (00001, 1, 1);
-INSERT INTO order_has_products VALUE (00001, 2, 1);
-INSERT INTO order_has_products VALUE (00002, 5, 1);
-INSERT INTO order_has_products VALUE (00002, 6, 1);
-INSERT INTO order_has_products VALUE (00002, 3, 1);
-INSERT INTO order_has_products VALUE (00003, 4, 1);
-INSERT INTO order_has_products VALUE (00003, 2, 1);
+INSERT INTO order_has_products VALUE (1, 00001, 1, 1);
+INSERT INTO order_has_products VALUE (2, 00001, 2, 1);
+INSERT INTO order_has_products VALUE (3, 00002, 5, 1);
+INSERT INTO order_has_products VALUE (4, 00002, 6, 1);
+INSERT INTO order_has_products VALUE (5, 00002, 3, 1);
+INSERT INTO order_has_products VALUE (6, 00003, 4, 1);
+INSERT INTO order_has_products VALUE (7, 00003, 2, 1);
 
 
 

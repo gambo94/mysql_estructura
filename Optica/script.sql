@@ -23,16 +23,13 @@ CREATE TABLE cliente (
     nombre_completo VARCHAR(20) NOT NULL,
     adr VARCHAR(50) NOT NULL,
     correo VARCHAR(20) NOT NULL,
-    fecha_registro TIMESTAMP NOT NULL
+    fecha_registro TIMESTAMP NOT NULL,
+    ref_cliente INT UNSIGNED,
+    FOREIGN KEY (ref_cliente) REFERENCES cliente(id_cliente)
 ); 
 
-CREATE TABLE ref_cliente(
-    id_referral INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    id_referent INT UNSIGNED,
-    id_referred INT UNSIGNED,
-    FOREIGN KEY (id_referent) REFERENCES cliente(id_cliente),
-    FOREIGN KEY (id_referred) REFERENCES cliente(id_cliente)
-);
+
+
 
 
 CREATE TABLE marca (
@@ -51,10 +48,16 @@ CREATE TABLE gafas (
     precio FLOAT NOT NULL,
     marca VARCHAR(15) NOT NULL,
     id_empleado INT UNSIGNED,
-    id_cliente INT UNSIGNED,
     FOREIGN KEY (marca) REFERENCES marca(marca),
-    FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
-    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+    FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado)
 );
 
 
+CREATE TABLE pedido(
+    id_pedido INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT UNSIGNED,
+    id_producto INT UNSIGNED,
+    fecha_compra TIMESTAMP,
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
+    FOREIGN KEY (id_producto) REFERENCES gafas(id_producto)
+);
